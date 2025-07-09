@@ -107,19 +107,35 @@ export function UserProfile() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background p-6 space-y-8">
+    <div className="min-h-screen bg-gradient-hero p-6 space-y-8">
       <div className="max-w-6xl mx-auto">
+        {/* Elegant Welcome Header */}
+        <div className="text-center mb-8 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-4">
+            Welcome Back, VIP
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Your exclusive membership experience awaits
+          </p>
+        </div>
+
         {/* Profile Header */}
-        <Card className="relative overflow-hidden bg-gradient-subtle shadow-premium animate-fade-in">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+        <Card className="relative overflow-hidden bg-gradient-card backdrop-blur-sm border-2 border-white/20 shadow-luxury animate-fade-in">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gold/5" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-luxury opacity-10 rounded-full blur-3xl" />
           <CardContent className="relative p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              <Avatar className="w-24 h-24 border-4 border-white shadow-lg animate-scale-in">
-                <AvatarImage src={mockUserData.avatar} alt={mockUserData.name} />
-                <AvatarFallback className="text-2xl font-bold bg-primary text-primary-foreground">
-                  {mockUserData.name.split(' ').map(n => n[0]).join('')}
-                </AvatarFallback>
-              </Avatar>
+              <div className="relative animate-scale-in">
+                <Avatar className="w-32 h-32 border-4 border-white shadow-glow-luxury">
+                  <AvatarImage src={mockUserData.avatar} alt={mockUserData.name} />
+                  <AvatarFallback className="text-3xl font-bold bg-gradient-luxury text-white">
+                    {mockUserData.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-luxury rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg animate-pulse">
+                  ★
+                </div>
+              </div>
               
               <div className="flex-1 space-y-4">
                 <div className="space-y-2">
@@ -176,9 +192,16 @@ export function UserProfile() {
         </Card>
 
         {/* Progress to Next Tier */}
-        <Card className="animate-slide-up" style={{ animationDelay: "400ms" }}>
-          <CardHeader>
-            <CardTitle>Progress to {mockUserData.nextTier.charAt(0).toUpperCase() + mockUserData.nextTier.slice(1)}</CardTitle>
+        <Card className="bg-gradient-card backdrop-blur-sm border-2 border-white/20 shadow-luxury animate-slide-up" style={{ animationDelay: "400ms" }}>
+          <CardHeader className="pb-2">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-2xl bg-gradient-luxury bg-clip-text text-transparent">
+                Journey to {mockUserData.nextTier.charAt(0).toUpperCase() + mockUserData.nextTier.slice(1)}
+              </CardTitle>
+              <div className="text-sm text-muted-foreground">
+                Elite Status Progression
+              </div>
+            </div>
           </CardHeader>
           <CardContent>
             <ProgressBar 

@@ -35,12 +35,13 @@ const typeConfig = {
 
 export function OrderHistory({ orders }: OrderHistoryProps) {
   return (
-    <Card className="animate-slide-up">
+    <Card className="bg-gradient-card backdrop-blur-sm border-2 border-white/20 shadow-luxury animate-slide-up">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-xl bg-gradient-luxury bg-clip-text text-transparent">
           <Calendar className="w-5 h-5 text-primary" />
-          Points History
+          Exclusive Rewards Timeline
         </CardTitle>
+        <p className="text-sm text-muted-foreground">Your premium earning journey</p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

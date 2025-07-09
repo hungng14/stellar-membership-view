@@ -84,12 +84,18 @@ export default {
 				'gradient-silver': 'var(--gradient-silver)',
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-platinum': 'var(--gradient-platinum)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
 				'tier': 'var(--shadow-tier)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'luxury': 'var(--shadow-luxury)',
+				'glow-luxury': 'var(--glow-luxury)',
+				'glow-tier': 'var(--glow-tier)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

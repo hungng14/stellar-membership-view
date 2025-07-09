@@ -33,12 +33,13 @@ const categoryConfig = {
 
 export function RewardsGallery({ rewards }: RewardsGalleryProps) {
   return (
-    <Card className="animate-slide-up">
+    <Card className="bg-gradient-card backdrop-blur-sm border-2 border-white/20 shadow-luxury animate-slide-up">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-xl bg-gradient-luxury bg-clip-text text-transparent">
           <Gift className="w-5 h-5 text-primary" />
-          Rewards Received
+          VIP Rewards Collection
         </CardTitle>
+        <p className="text-sm text-muted-foreground">Your exclusive benefits showcase</p>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
