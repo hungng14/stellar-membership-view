@@ -107,14 +107,14 @@ export function UserProfile() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-hero p-6 space-y-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-hero p-4 md:p-6">
+      <div className="max-w-6xl mx-auto space-y-6">
         {/* Elegant Welcome Header */}
-        <div className="text-center mb-8 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-4">
+        <div className="text-center mb-6 animate-fade-in">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-2">
             Welcome Back, VIP
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Your exclusive membership experience awaits
           </p>
         </div>
@@ -123,7 +123,7 @@ export function UserProfile() {
         <Card className="relative overflow-hidden bg-gradient-card backdrop-blur-sm border-2 border-white/20 shadow-luxury animate-fade-in">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gold/5" />
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-luxury opacity-10 rounded-full blur-3xl" />
-          <CardContent className="relative p-8">
+          <CardContent className="relative p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               <div className="relative animate-scale-in">
                 <Avatar className="w-32 h-32 border-4 border-white shadow-glow-luxury">
@@ -213,7 +213,7 @@ export function UserProfile() {
         </Card>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <OrderHistory orders={mockOrders} />
           <RewardsGallery rewards={mockRewards} />
         </div>
